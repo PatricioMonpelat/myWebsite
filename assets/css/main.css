@@ -1659,14 +1659,3 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
-.tech{
-	height: 90px;
-}
-
-.cara {
-    border-radius: 500px;
-	width: 200px;
-	height: 200px;
-	border: solid 1px #ffffff;
-	line-height: 5.5rem;
-}
