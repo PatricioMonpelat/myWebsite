@@ -1291,8 +1291,8 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
+			width: 14rem;
+			height: 14rem;
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
@@ -1661,4 +1661,12 @@ input, select, textarea {
 		}
 .tech{
 	height: 90px;
+}
+
+.cara {
+    border-radius: 500px;
+	width: 220px;
+	height: 221px;
+	border: solid 1px #ffffff;
+	line-height: 5.5rem;
 }
