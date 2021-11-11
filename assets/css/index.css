@@ -9,3 +9,11 @@
 	border: solid 1px #ffffff;
 	line-height: 5.5rem;
 }
+
+.aptitudes{
+	width: auto;
+}
+
+.tech-list{
+	display: flex; justify-content: space-between;padding-top: 10px;
+}
