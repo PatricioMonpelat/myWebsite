@@ -8,7 +8,7 @@ This is my online resume.
 4. [Collaboration](#collaboration)
 ## General Info
 ***
-Just click on this link and checkout my website. https://patriciomonpelat.github.io/myResume/ 
+Just click this link to see the website https://patriciomonpelat.github.io/myResume/ 
 
 ## Technologies
 ***
