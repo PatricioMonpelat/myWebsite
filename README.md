@@ -21,12 +21,9 @@ JavaScript
 ```
 ## Installation
 ***
-A little intro about the installation. 
+It's not necesarry to install anything just click link below
 ```
-$ git clone https://github.com/PatricioMonpelat/myResume.git
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
+https://patriciomonpelat.github.io/myResume/
 ```
 ## Collaboration
 ***
