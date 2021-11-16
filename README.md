@@ -1,5 +1,4 @@
 # myResume
-***
 This is my online resume.
 ## Table of Contents
 ***
@@ -9,7 +8,7 @@ This is my online resume.
 4. [Collaboration](#collaboration)
 ## General Info
 ***
-https://patriciomonpelat.github.io/myResume/ copy and paste this link in your browser to checkout this website.
+Just click on this link and checkout my website. https://patriciomonpelat.github.io/myResume/ 
 
 ## Technologies
 ***
