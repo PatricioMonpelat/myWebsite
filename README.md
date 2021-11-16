@@ -14,8 +14,11 @@ Write down general information about your project. It is a good idea to always p
 ## Technologies
 ***
 A list of technologies used within the project:
-
-
+```
+Html
+Css
+JavaScript
+```
 ## Installation
 ***
 A little intro about the installation. 
