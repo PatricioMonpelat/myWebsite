@@ -9,7 +9,7 @@ This is my online resume.
 4. [Collaboration](#collaboration)
 ## General Info
 ***
-Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it. 
+https://patriciomonpelat.github.io/myResume/ copy and paste this link in your browser to checkout this website.
 
 ## Technologies
 ***
@@ -21,7 +21,7 @@ JavaScript
 ```
 ## Installation
 ***
-It's not necesarry to install anything just click link below
+It's not necesarry to install anything.
 ```
 https://patriciomonpelat.github.io/myResume/
 ```
