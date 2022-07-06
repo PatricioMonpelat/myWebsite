@@ -19,7 +19,7 @@
 }
 
 .portfolio{
-	width: auto;			
+	width: auto;
 }
 .portfolio-list{
 	display: flex; justify-content: space-between;padding-top: 10px;
@@ -46,7 +46,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	text-decoration: none;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -182,6 +184,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
+			text-decoration: none;
 		}
 
 	strong, b {
@@ -941,6 +944,7 @@ input, select, textarea {
 				line-height: 2.25rem;
 				text-align: center;
 				width: 2.25rem;
+			
 			}
 
 				ul.icons li a:hover {

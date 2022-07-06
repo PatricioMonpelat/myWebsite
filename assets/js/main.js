@@ -1,16 +1,7 @@
-function redirectTo(img) {
-  if ((img = "project1")) {
-    window.location.href = "https://main.d12tjqlp7iebde.amplifyapp.com/"; // ANGULAR Recipe APP
-  } else if ((img = "project2")) {
-    window.location.href = "https://master.d2wdqoywqdq366.amplifyapp.com/"; // REACT NFT APP
-  } else if ((img = "project3")) {
-    window.location.href = "https://master.d2lno1hp5sufbz.amplifyapp.com/"; // ANGULAR MEMEAR
-  } else if ((img = "project4")) {
-    window.location.href = "https://master.dn137kgjwpuw2.amplifyapp.com/"; // REACT - ML CLONE
-  }
-}
+
 
 (function ($) {
+
   var $window = $(window),
     $body = $("body"),
     $wrapper = $("#wrapper"),
