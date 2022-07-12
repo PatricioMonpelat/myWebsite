@@ -22,7 +22,7 @@
 	width: auto;
 }
 .portfolio-list{
-	display: flex; justify-content: space-between;padding-top: 10px;
+	display: flex; justify-content: center;padding-top: 10px;
 }
 .portfolio-item{
 	width:340px;
