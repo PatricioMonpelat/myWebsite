@@ -1,5 +1,5 @@
 # myResume
-This is my online resume
+This is my online resume.
 ## Table of Contents
 ***
 1. [General Info](#general-info)
