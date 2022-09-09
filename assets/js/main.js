@@ -1,7 +1,4 @@
-
-
 (function ($) {
-
   var $window = $(window),
     $body = $("body"),
     $wrapper = $("#wrapper"),
@@ -10,6 +7,25 @@
     $main = $("#main"),
     $main_articles = $main.children("article");
 
+  // cursor
+  const cursor = document.querySelector(".cursor");
+  const links = document.querySelectorAll("a");
+  document.addEventListener("mousemove", (e) => {
+    let leftPosition = e.clientX + 4;
+    let topPosition = e.clientY + 4;
+    cursor.style.left = leftPosition + "px";
+    cursor.style.top = topPosition + "px";
+  });
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("large");
+    });
+  });
+  links.forEach((link) => {
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("large");
+    });
+  });
   // Breakpoints.
   breakpoints({
     xlarge: ["1281px", "1680px"],
