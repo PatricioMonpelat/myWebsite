@@ -9,19 +9,30 @@
 
   // cursor
   const cursor = document.querySelector(".cursor");
-  const links = document.querySelectorAll("a");
+  const a = document.querySelectorAll("a");
+  const img = document.querySelectorAll("img");
   document.addEventListener("mousemove", (e) => {
     let leftPosition = e.clientX + 4;
     let topPosition = e.clientY + 4;
     cursor.style.left = leftPosition + "px";
     cursor.style.top = topPosition + "px";
   });
-  links.forEach((link) => {
+  a.forEach((link) => {
     link.addEventListener("mouseenter", () => {
       cursor.classList.add("large");
     });
   });
-  links.forEach((link) => {
+  a.forEach((link) => {
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("large");
+    });
+  });
+  img.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("large");
+    });
+  });
+  img.forEach((link) => {
     link.addEventListener("mouseleave", () => {
       cursor.classList.remove("large");
     });
