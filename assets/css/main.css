@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+@import url(fonts.css);
 :root {
   cursor: url("../../images/custom-cursor-white.png"), auto;
 }
