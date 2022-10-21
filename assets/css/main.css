@@ -3,6 +3,10 @@
 :root {
   cursor: url("../../images/custom-cursor-white.png"), auto;
 }
+.portfolio-list > a {
+  text-decoration: none;
+}
+
 .cursor {
   position: fixed;
   width: 50px;
