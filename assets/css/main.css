@@ -50,8 +50,8 @@
   padding-top: 10px;
 }
 .portfolio-item {
-  width: 340px;
-  height: 190px;
+  width: 100%;
+  height: 100%;
 }
 
 html,
