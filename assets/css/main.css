@@ -6,7 +6,13 @@
 .portfolio-list > a {
   text-decoration: none;
 }
+.space{
+  height: 50px;
+}
 
+body header a:link, body header a:visited {
+  text-decoration: none;
+}
 .cursor {
   position: fixed;
   width: 50px;
@@ -287,7 +293,7 @@ textarea {
   line-height: 1.65;
 }
 
-a {
+/* a {
   -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
     border-bottom-color 0.2s ease-in-out;
   -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
@@ -300,7 +306,12 @@ a {
   text-decoration: none !important;
   color: inherit;
   cursor: none;
+} */
+
+a{
+  color: inherit;
 }
+
 
 a:hover {
   border-bottom-color: transparent;
@@ -1279,7 +1290,7 @@ button {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
   position: fixed;
   top: 0;
   left: 0;
@@ -1455,7 +1466,7 @@ body.is-preload #bg:before {
   margin-top: 3.5rem;
 }
 
-#header > *:before {
+/* #header > *:before {
   content: "";
   display: block;
   position: absolute;
@@ -1464,7 +1475,7 @@ body.is-preload #bg:before {
   width: 1px;
   height: calc(3.5rem + 1px);
   background: #ffffff;
-}
+} */
 
 #header > :first-child {
   margin-top: 0;
@@ -1487,11 +1498,11 @@ body.is-preload #bg:before {
 }
 
 #header .content {
-  border-style: solid;
+  /* border-style: solid;
   border-color: #ffffff;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  max-width: 100%;
+  max-width: 100%; */
 }
 
 #header .content .inner {
