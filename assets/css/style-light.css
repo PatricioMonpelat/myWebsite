@@ -1,0 +1,136 @@
+body {
+  color: black;
+  background-color: white;
+  transition: color 0.2s ease-in-out;
+  background-color: 0.2s ease-in-out;
+}
+.glitch{color: black}
+:root {
+  cursor: url("../../images/custom-cursor-black.png"), auto;
+}
+.cursor {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 1000ms, height 1000ms;
+}
+
+.cursor.large {
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  opacity: 30%;
+  cursor: none;
+}
+
+ul.icons li a {
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px black;
+  display: inline-block;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  width: 2.25rem;
+  cursor: none;
+}
+
+#header nav ul li {
+  padding-left: 0;
+  border-left: solid 1px black;
+}
+
+#header nav.use-middle ul li.is-middle {
+  border-left: 0;
+}
+
+#header nav ul {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  border: solid 1px black;
+  border-radius: 4px;
+}
+
+#header nav.use-middle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+  width: 1px;
+  height: 100%;
+  background: black;
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    padding: 1.5rem 0;
+  }
+
+  #header .content .inner {
+    padding: 2.5rem 0;
+  }
+
+  #header nav ul {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+
+  #header nav ul li {
+    border-left: 0;
+    border-top: solid 1px black;
+  }
+
+  #header nav ul li:first-child {
+    border-top: 0;
+  }
+
+  #header nav ul li a {
+    height: 3rem;
+    line-height: 3rem;
+    min-width: 0;
+    width: 100%;
+  }
+
+  #header nav.use-middle:after {
+    display: none;
+  }
+}
+
+#main article {
+  -moz-transform: translateY(0.25rem);
+  -webkit-transform: translateY(0.25rem);
+  -ms-transform: translateY(0.25rem);
+  transform: translateY(0.25rem);
+  -moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
+  -webkit-transition: opacity 0.325s ease-in-out,
+    -webkit-transform 0.325s ease-in-out;
+  -ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
+  transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+  padding: 4.5rem 2.5rem 1.5rem 2.5rem;
+  position: relative;
+  width: 40rem;
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 4px;
+  opacity: 0;
+}
+
+#main article.active{
+  color: white;
+}
+
+
