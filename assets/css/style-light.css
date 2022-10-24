@@ -4,9 +4,14 @@ body {
   transition: color 0.2s ease-in-out;
   background-color: 0.2s ease-in-out;
 }
+p[id]{
+  font-weight: 900;
+
+}
 .glitch{color: black}
 :root {
   cursor: url("../../images/custom-cursor-black.png"), auto;
+  font-weight: 700;
 }
 .cursor {
   position: fixed;
@@ -58,6 +63,7 @@ ul.icons li a {
   padding-left: 0;
   border: solid 1px black;
   border-radius: 4px;
+  font-weight: 900;
 }
 
 #header nav.use-middle:after {
