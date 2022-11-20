@@ -9,6 +9,12 @@
 .space{
   height: 50px;
 }
+.project-tech{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
 
 body header a:link, body header a:visited {
   text-decoration: none;
