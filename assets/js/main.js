@@ -7,6 +7,12 @@
     $main = $("#main"),
     $main_articles = $main.children("article");
 
+  // typewriter
+  const typeWriter = document.getElementById('typewriter-text');
+  const text = 'FULL STACK DEVELOPER WITH A STRONG FOCUS ON INTERFACES. BASED IN BUENOS AIRES, ARGENTINA.';
+  typeWriter.innerHTML = text;
+  typeWriter.style.setProperty('--characters', text.length);
+  
   // cursor
   const cursor = document.querySelector(".cursor");
   const a = document.querySelectorAll("a");
@@ -355,4 +361,8 @@
     $window.on("load", function () {
       $main._show(location.hash.substr(1), true);
     });
+
+
+
+
 })(jQuery);
