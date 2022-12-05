@@ -9,7 +9,7 @@
 
   // typewriter
   const typeWriter = document.getElementById('typewriter-text');
-  const text = 'FULL STACK DEVELOPER WITH A STRONG FOCUS ON INTERFACES. BASED IN BUENOS AIRES, ARGENTINA.';
+  const text = 'FULL STACK DEVELOPER WITH A STRONG FOCUS ON INTERFACES.';
   typeWriter.innerHTML = text;
   typeWriter.style.setProperty('--characters', text.length);
   
