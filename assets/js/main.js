@@ -70,7 +70,7 @@
     window.setTimeout(function () {
       $body.removeClass("is-preload");
       $preloader.removeClass("bouncing-loader");
-    }, 500);
+    }, 100);
   });
 
   // Fix: Flexbox min-height bug on IE.
