@@ -5,7 +5,19 @@
     $header = $("#header"),
     $footer = $("#footer"),
     $main = $("#main"),
-    $main_articles = $main.children("article");
+    $main_articles = $main.children("article"),
+    $preloader = $("#bouncing-loader");
+
+  
+    /**
+   * Preloader
+   */
+    // const preloader = document.getElementById('bouncing-loader');
+    // if (preloader) {
+    //   window.addEventListener('load', () => {
+    //     preloader.remove();
+    //   });
+    // }
 
   // typewriter
   const typeWriter = document.getElementById('typewriter-text');
@@ -57,7 +69,8 @@
   $window.on("load", function () {
     window.setTimeout(function () {
       $body.removeClass("is-preload");
-    }, 100);
+      $preloader.removeClass("bouncing-loader");
+    }, 1000);
   });
 
   // Fix: Flexbox min-height bug on IE.
