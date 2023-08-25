@@ -6,13 +6,13 @@
     $footer = $("#footer"),
     $main = $("#main"),
     $main_articles = $main.children("article"),
-    $preloader = $("#pong");
+    $preloader = $("#bouncing-loader");
 
   
     /**
    * Preloader
    */
-    // const preloader = document.getElementById('pong');
+    // const preloader = document.getElementById('bouncing-loader');
     // if (preloader) {
     //   window.addEventListener('load', () => {
     //     preloader.remove();
@@ -69,7 +69,7 @@
   $window.on("load", function () {
     window.setTimeout(function () {
       $body.removeClass("is-preload");
-      $preloader.removeClass("pong");
+      $preloader.removeClass("bouncing-loader");
     }, 100);
   });
 
