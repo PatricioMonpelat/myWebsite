@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patricio Monpelat - Amazon Product Recommendations</title>
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="https://monpelat.dev/assets/favicon.ico"
+    >
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for horizontal carousel cards */
+        .carousel-inner {
+            display: flex;
+            flex-direction: row; /* Display cards in a row */
+        }
+
+        .carousel-item {
+            width: 100%; /* Each item takes up full width */
+        }
+
+        .card {
+            flex: 0 0 50%; /* Adjust the width of each card as needed */
+            margin: 0;
+            border: none; /* Remove default card border */
+        }
+
+        .card img {
+            max-width: 100%;
+            max-height: 100%; /* Add this line to maintain aspect ratio */
+            height: auto;
+            object-fit: cover; /* Ensure the image fits without distortion */
+        }
+
+    
+    </style>
+</head>
+<body style="background-color: black;">
+
+<div class="container mt-5">
+    <h1 class="mb-4" style="color: white;">Amazon Product Recommendations</h1>
+
+    <!-- Carousel -->
+    <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Product Cards -->
+            <div class="carousel-item active" id="product1">
+                <div class="card">
+                    <img class="card-img-top" src="./images/space360.jpg"  alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">SunTime Star Projector Galaxy Night Light - Astronaut Starry Nebula Ceiling LED Lamp with Timer and Remote, Gift for Kids Adults for Bedroom, Christmas, Birthdays, Valentine's Day etc.</h5>
+                        <p class="card-text">Color:	White</p>
+                        <p class="card-text"> Material:	Acrylonitrile Butadiene Styrene (ABS)</p>
+                        <p class="card-text">    Light Source Type	LED</p>
+                        <p class="card-text">  Shade Material	Acrylonitrile Butadiene Styrene, Polyvinyl Chloride</p>
+                        <p class="card-text">   Power Source	Corded Electric</p>
+                        <a href="https://amzn.to/46r4sNC" class="btn btn-primary" target="_blank">View on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" id="product2">
+                <div class="card">
+                    <img class="card-img-top" src="./images/vizio.jpg" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">VIZIO V-Series 5.1 Home Theater Sound Bar with Dolby Audio, Bluetooth, Wireless Subwoofer, Voice Assistant Compatible, Includes Remote Control - V51x-J6</h5>
+                        <p class="card-text">
+                            Brand	VIZIO</p>
+                        <p class="card-text"> Model Name	V51x-J6</p>
+                        <p class="card-text">   Speaker Type	Surround Sound,Soundbar,Subwoofer</p>
+                        <p class="card-text"> Connectivity Technology	Auxiliary, HDMI</p>
+                        <p class="card-text">   Special Feature	5.1-Channel Configuration; Front Surround Mode; Dialogue Enhancement EQ; DTS Virtual:X; Loud and Clear with Powerful Bass; Low-Profile Design5.1-Channel Configuration; Front Surround Mode; Dialogue Enhancement EQ; DTS Virtual:X; Loud and Clear with Powerful Bass; Low-Profile Design</p>
+                        <a href="https://amzn.to/40SMUJ1" class="btn btn-primary" target="_blank">View on Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more carousel items for additional products -->
+
+        </div>
+      
+    </div>
+      <!-- Carousel controls outside the carousel -->
+    <div class="carousel-controls">
+        <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="color: black;"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"  style="color: black;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
