@@ -99,6 +99,6 @@ body {
               background-color: #fff;
           }
           100% {
-              background-color: black;
+              background-color: rgb(80, 80, 80);
           }
       }

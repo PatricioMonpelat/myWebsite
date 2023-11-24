@@ -37,10 +37,14 @@ function updateTimerDisplay(minutes, seconds) {
     const newSecondOnes = seconds % 10;
 
     // Update both secondTens and secondOnes together
-    if (newSecondTens !== currentSecondTens || newSecondOnes !== currentSecondOnes) {
+    if (newSecondTens !== currentSecondTens) {
         updateFlipCard(secondTens, newSecondTens);
-        updateFlipCard(secondOnes, newSecondOnes);
         currentSecondTens = newSecondTens;
+    }
+
+    // Only update secondOnes if it's different
+    if (newSecondOnes !== currentSecondOnes) {
+        updateFlipCard(secondOnes, newSecondOnes);
         currentSecondOnes = newSecondOnes;
     }
 }
