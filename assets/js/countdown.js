@@ -64,7 +64,9 @@ function updateFlipCard(element, value) {
 
 function resetTimer() {
     clearInterval(countdown);
-    document.getElementById('minutes').value = 0;
-    document.getElementById('seconds').value = 0;
+    document.getElementById('minuteTens').value = 0;
+    document.getElementById('minuteOnes').value = 0;
+    document.getElementById('secondTens').value = 0;
+    document.getElementById('secondOnes').value = 0;
     updateTimerDisplay(0, 0);
 }
