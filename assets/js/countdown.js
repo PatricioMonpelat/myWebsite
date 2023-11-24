@@ -36,13 +36,11 @@ function updateTimerDisplay(minutes, seconds) {
     const newSecondTens = Math.floor(seconds / 10);
     const newSecondOnes = seconds % 10;
 
-    if (newSecondTens !== currentSecondTens) {
+    // Update both secondTens and secondOnes together
+    if (newSecondTens !== currentSecondTens || newSecondOnes !== currentSecondOnes) {
         updateFlipCard(secondTens, newSecondTens);
-        currentSecondTens = newSecondTens;
-    }
-
-    if (newSecondOnes !== currentSecondOnes) {
         updateFlipCard(secondOnes, newSecondOnes);
+        currentSecondTens = newSecondTens;
         currentSecondOnes = newSecondOnes;
     }
 }
