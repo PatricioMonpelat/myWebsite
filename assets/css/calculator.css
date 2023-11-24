@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: bold 14px Arial, sans-serif;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #calculator {
+    width: 350px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background: #101010;
+    background: linear-gradient(#494949, #494949);
+    border-radius: 3px;
+    box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 48%;
+    padding: 10px;
+    margin: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid grey;
+  }
+
+.top.screen #display{
+    height: 40px;
+    width: 212px;
+    float: right;
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+#eval{
+    background: #f1ff92;
+    box-shadow: 0px 4px #9da853;
+    color: #888e5f;
+    border-radius: 3px;
+}
+#eval:hover{
+        background: #abb850;
+        box-shadow: 0px 4px #717a33;
+        color: #ffffff;
+}
+#eval:active{
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    
+ 
+}
+.keys button {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.erase{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.erase span{
+    width: 100%;
+}
+.erase button{
+    width: 100%;
+}
+
+#c{
+    border-radius: 3px;
+    background: #ff9fa8;
+    box-shadow: 0px 4px #ff7c87;
+    color: white;
+}

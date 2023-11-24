@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./assets/css/calculator.css">
+	<link
+	rel="shortcut icon"
+	type="image/ico"
+	href="https://monpelat.dev/assets/favicon.ico"
+  >
+</head>
+<body>
+    <div id="calculator">
+       
+        <br>
+        <div class="top">
+            <div class="screen"> <input type="text" id="display" readonly></div>
+        </div>
+        <div class="erase">
+
+            <span class="clear"> <button onclick="clearDisplay()" id="c">C</button></span>
+            <button onclick="backspace()" style="    border-radius: 3px;">Back</button>
+        </div>    
+        
+        <div class="keys">
+
+           <button onclick="appendCharacter('/')">/</button>
+           <button onclick="appendCharacter('*')">*</button>
+           <button onclick="appendCharacter('+')">+</button>
+           <button onclick="appendCharacter('-')">-</button>
+           <button onclick="appendCharacter('9')">9</button>
+           <button onclick="appendCharacter('8')">8</button>
+           <button onclick="appendCharacter('7')">7</button>
+           <button onclick="appendCharacter('6')">6</button>
+           <button onclick="appendCharacter('2')">2</button>
+           <button onclick="appendCharacter('3')">3</button>
+           <button onclick="appendCharacter('4')">4</button>
+           <button onclick="appendCharacter('5')">5</button>
+           <button onclick="appendCharacter('1')">1</button>
+           <button onclick="appendCharacter('0')">0</button>
+           <button onclick="appendCharacter('.')">.</button>
+           <button onclick="calculate()" id="eval">=</button>
+        </div>
+ 
+      </div>
+
+
+		<script src="./assets/js/calculator.js"></script>
+</body>    
+
+
+</html>
