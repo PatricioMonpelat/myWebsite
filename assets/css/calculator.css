@@ -107,3 +107,8 @@ body {
     box-shadow: 0px 4px #ff7c87;
     color: white;
 }
+#c:hover{
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: white;
+}
