@@ -29,6 +29,15 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 3px;
+    font-size: 17px;
+    line-height: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
   }
 
   button {
@@ -39,22 +48,6 @@ body {
     cursor: pointer;
     border: 1px solid grey;
   }
-
-.top.screen #display{
-    height: 40px;
-    width: 212px;
-    float: right;
-    padding: 0 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
-    font-size: 17px;
-    line-height: 40px;
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    text-align: right;
-    letter-spacing: 1px;
-}
 
 #eval{
     background: #f1ff92;
@@ -86,6 +79,17 @@ body {
 .keys button:hover{
     background: #9c89f6;
     box-shadow: 0px 4px #6b54d3;
+    color: white;
+}
+.back{
+    border-radius: 3px;
+    background: #676769;
+    box-shadow: 0px 4px #2b2a2d;
+    color: white;
+}
+.back:hover{
+    background: #515153;
+    box-shadow: 0px 4px #151416;
     color: white;
 }
 
