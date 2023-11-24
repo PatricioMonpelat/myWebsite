@@ -83,6 +83,11 @@ body {
     width: 100%;
     border-radius: 3px;
 }
+.keys button:hover{
+    background: #9c89f6;
+    box-shadow: 0px 4px #6b54d3;
+    color: white;
+}
 
 .erase{
     display: grid;
