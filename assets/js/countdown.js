@@ -1,12 +1,14 @@
 let countdown;
-    
+let currentSecondTens = 0;
+let currentSecondOnes = 0;
+
 function startTimer() {
     const minutesInput = document.getElementById('minutes');
     const secondsInput = document.getElementById('seconds');
     const timerDisplay = document.getElementById('timer');
 
     let totalSeconds = parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
-    
+
     countdown = setInterval(function () {
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
@@ -30,20 +32,32 @@ function updateTimerDisplay(minutes, seconds) {
 
     minuteTens.innerText = String(Math.floor(minutes / 10));
     minuteOnes.innerText = String(minutes % 10);
-    secondTens.innerText = String(Math.floor(seconds / 10));
-    secondOnes.innerText = String(seconds % 10);
 
-    // Apply flicker effect to each timer card
-    flickerEffect([minuteTens, minuteOnes, secondTens, secondOnes]);
+    const newSecondTens = Math.floor(seconds / 10);
+    const newSecondOnes = seconds % 10;
+
+    if (newSecondTens !== currentSecondTens) {
+        updateFlipCard(secondTens, newSecondTens);
+        currentSecondTens = newSecondTens;
+    }
+
+    if (newSecondOnes !== currentSecondOnes) {
+        updateFlipCard(secondOnes, newSecondOnes);
+        currentSecondOnes = newSecondOnes;
+    }
 }
 
-function flickerEffect(elements) {
-    elements.forEach(element => {
-        element.classList.add('flicker');
-        setTimeout(() => {
-            element.classList.remove('flicker');
-        }, 100);
-    });
+function updateFlipCard(element, value) {
+    const front = element.querySelector('.front');
+    const back = element.querySelector('.back');
+
+    back.innerText = String(value);
+
+    // Trigger the flip animation
+    element.classList.add('flip');
+    setTimeout(() => {
+        element.classList.remove('flip');
+    }, 500);
 }
 
 function resetTimer() {
