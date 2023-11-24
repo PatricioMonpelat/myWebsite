@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+    <!-- <div class="digital-clock">
+        <div class="time">00:00:00</div>
+    </div>
+	<br><br> -->
+<div class="container">
+	
+	<div id="timer" class="box">
+		<div class="timer-card" id="minuteTens">0</div>
+		<div class="timer-card" id="minuteOnes">0</div>
+		<div class="timer-card">:</div>
+		<div class="timer-card" id="secondTens">0</div>
+		<div class="timer-card" id="secondOnes">0</div>
+	</div>
+	 
+	 <div class="box">
+		<label for="minutes" style="color:white;">Minutes:</label>
+		<input type="number" id="minutes" min="0" value="0">
+		
+		<label for="seconds" style="color:white;">Seconds:</label>
+		<input type="number" id="seconds" min="0" max="59" value="0" >
+		
+		<button onclick="startTimer()">Start Timer</button>
+		<button onclick="resetTimer()">Reset</button>
+	</div>
+
+	
+
+</div>	
+		<script src="script.js"></script>
+</body>    
+
+
+</html>
