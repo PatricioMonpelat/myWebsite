@@ -446,9 +446,9 @@ h6.major {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 0.6rem;
   line-height: 1.3;
-  letter-spacing: 0.5rem;
+   /* letter-spacing: 0.5rem; */
 }
 
 h2 {
