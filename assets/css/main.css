@@ -138,8 +138,11 @@ body header a:link, body header a:visited {
   padding-top: 10px;
 }
 .portfolio-item {
-  width: 100%;
-  height: auto;
+  /* width: 100%;
+  height: auto; */
+  object-fit: cover; /* or object-fit: contain; depending on your preference */
+  width: 720px; /* Desired display width */
+  height: 340px; /* Desired display height */
 }
 
 html,
