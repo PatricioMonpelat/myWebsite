@@ -64,7 +64,7 @@ body {
 .glow-on-hover {
   border: none;
   outline: none;
-  color: #fff;
+  color: #fff !important;
   background: #111;
   cursor: pointer;
   position: relative;
