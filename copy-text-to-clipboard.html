@@ -6,15 +6,21 @@
     <title>Copy Text to Clipboard</title>
     <link rel="shortcut icon" type="image/ico" href="https://monpelat.dev/assets/favicon.ico">
     <meta name="author" content="Patricio Monpelat">
-    <link rel=“stylesheet” type=“text/css” href=copy-text-to-clipboard.css” />
+    <link rel=“stylesheet” type=“text/css” href=https://monpelat.dev/assets/css/copy-text-to-clipboard.css” />
 </head>
 <body>
-    <!-- The text field -->
-<input type="text" value="Hello World" id="myInput">
+    <div style="text-align: center; position: relative; margin-top: 400px;">
+        
+        <input type="text" value="Hello World" id="myInput" style="display: inline-block;">
 
-<!-- The button used to copy the text -->
-<button onclick="myFunction()">Copy text</button>
+        <div class="tooltip" style="display: inline-block; vertical-align: top;">
+        <button onclick="myFunction()" onmouseout="outFunc()">
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+          Copy text
+          </button>
+        </div>
+    </div>
 
-<script src="copy-text-to-clipboard.js"></script>
+<script src="https://monpelat.dev/assets/css/copy-text-to-clipboard.js"></script>
 </body>
 </html>
