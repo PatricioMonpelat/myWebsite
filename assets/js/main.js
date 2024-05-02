@@ -16,6 +16,7 @@
    document.getElementById('nextSkill').src = urls.skills.next;
    document.getElementById('tailwindSkill').src = urls.skills.tailwind;
    document.getElementById('vercelSkill').src = urls.skills.vercel;
+   document.getElementById('stripeSkill').src = urls.skills.stripe;
 
    document.getElementById('project1_mock').src = urls.portfolio[1].project1_mock;
    document.getElementById('project2_mock').src = urls.portfolio[2].project2_mock;

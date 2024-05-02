@@ -1,8 +1,8 @@
 var urls = {
   portfolio: {
     1: {
-      liveDemo: "",
-      sourceCode: "",
+      liveDemo: "https://netflix-clone-80fc2.web.app/",
+      sourceCode: "https://github.com/PatricioMonpelat/netflix-clone.git",
       project1_mock: "https://monpelat.dev/images/projects/project1_mock.webp",
     },
     2: {
@@ -49,6 +49,7 @@ var urls = {
     next: "https://monpelat.dev/images/skills/next.webp",
     tailwind: "https://monpelat.dev/images/skills/tailwind.webp",
     vercel: "https://monpelat.dev/images/skills/vercel.webp",
+    stripe: "https://monpelat.dev/images/skills/stripe.webp",
   },
   personal: {
     linkedin: "https://www.linkedin.com/in/patricio-monpelat-872172133/",
