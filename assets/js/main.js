@@ -17,6 +17,7 @@
    document.getElementById('tailwindSkill').src = urls.skills.tailwind;
    document.getElementById('vercelSkill').src = urls.skills.vercel;
    document.getElementById('stripeSkill').src = urls.skills.stripe;
+   document.getElementById('javascriptSkill').src = urls.skills.javascript;
 
 
    // add href sources to elements
