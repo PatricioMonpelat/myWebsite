@@ -33,4 +33,9 @@ var urls = {
       sourceCode: "",
     },
   },
+  skills: {
+    angular: 'https://monpelat.dev/images/skills/angular.webp',
+    aws:'https://monpelat.dev/images/svg/aws.svg',
+
+  }
 };

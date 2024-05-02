@@ -8,6 +8,10 @@
     $main_articles = $main.children("article"),
     $preloader = $("#bouncing-loader");
 
+
+   document.getElementById('angularSkill').src = urls.skills.angular;
+   document.getElementById('awsSkill').src = urls.skills.aws;
+    
   
     /**
    * Preloader
@@ -374,6 +378,7 @@
     $window.on("load", function () {
       $main._show(location.hash.substr(1), true);
     });
+
 
 
 
