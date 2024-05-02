@@ -3,6 +3,7 @@ var urls = {
     1: {
       liveDemo: "https://master.d2lno1hp5sufbz.amplifyapp.com/",
       sourceCode: "https://github.com/PatricioMonpelat/MemeAr.git",
+      project4_mock: "https://monpelat.dev/images/projects/project4_mock.webp",
     },
     2: {
       liveDemo: "",
@@ -13,8 +14,9 @@ var urls = {
       sourceCode: "",
     },
     4: {
-      liveDemo: "",
-      sourceCode: "",
+        liveDemo: "https://master.d2lno1hp5sufbz.amplifyapp.com/",
+        sourceCode: "https://github.com/PatricioMonpelat/MemeAr.git",
+        project4_mock: "https://monpelat.dev/images/projects/project4_mock.webp",
     },
     5: {
       liveDemo: "",
@@ -37,5 +39,11 @@ var urls = {
     angular: 'https://monpelat.dev/images/skills/angular.webp',
     aws:'https://monpelat.dev/images/svg/aws.svg',
 
+  },
+  personal:{
+    linkedin: 'https://www.linkedin.com/in/patricio-monpelat-872172133/',
+    github:'https://github.com/PatricioMonpelat',
+    gmail: 'mailto:patricio.monpelat@gmail.com'
   }
+
 };

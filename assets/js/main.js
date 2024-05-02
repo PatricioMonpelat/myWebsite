@@ -11,6 +11,13 @@
 
    document.getElementById('angularSkill').src = urls.skills.angular;
    document.getElementById('awsSkill').src = urls.skills.aws;
+
+   document.getElementById('project4_mock').src = urls.portfolio[1].project4_mock;
+
+
+   document.getElementById('linkedin_href').href = urls.personal.linkedin;
+   document.getElementById('github_href').href = urls.personal.github;
+   document.getElementById('gmail_href').href = urls.personal.gmail;
     
   
     /**
