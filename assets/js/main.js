@@ -8,7 +8,7 @@
     $main_articles = $main.children("article"),
     $preloader = $("#bouncing-loader");
 
-
+  // add sources to all images
    document.getElementById('angularSkill').src = urls.skills.angular;
    document.getElementById('awsSkill').src = urls.skills.aws;
    document.getElementById('reactSkill').src = urls.skills.react;
@@ -18,6 +18,8 @@
    document.getElementById('vercelSkill').src = urls.skills.vercel;
    document.getElementById('stripeSkill').src = urls.skills.stripe;
 
+
+   // add href sources to elements
    document.getElementById('project1_mock').src = urls.portfolio[1].project1_mock;
    document.getElementById('project2_mock').src = urls.portfolio[2].project2_mock;
    document.getElementById('project3_mock').src = urls.portfolio[3].project3_mock;
@@ -27,6 +29,7 @@
    document.getElementById('project7_mock').src = urls.portfolio[7].project7_mock;
    document.getElementById('project8_mock').src = urls.portfolio[8].project8_mock;
 
+   // add urls to personal info
    document.getElementById('linkedin_href').href = urls.personal.linkedin;
    document.getElementById('github_href').href = urls.personal.github;
    document.getElementById('gmail_href').href = urls.personal.gmail;
