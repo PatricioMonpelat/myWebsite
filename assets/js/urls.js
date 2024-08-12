@@ -45,7 +45,6 @@ var urls = {
     tailwind: "https://monpelat.dev/images/skills/tailwind.webp",
     vercel: "https://monpelat.dev/images/skills/vercel.webp",
     stripe: "https://monpelat.dev/images/skills/stripe.webp",
-    javascript: "https://monpelat.dev/images/skills/javascript.webp",
   },
   personal: {
     linkedin: "https://www.linkedin.com/in/patricio-monpelat-872172133/",
