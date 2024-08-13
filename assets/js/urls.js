@@ -1,6 +1,7 @@
 var urls = {
   portfolio: {
     1: {
+<<<<<<< HEAD
       liveDemo: "https://netflix-clone-80fc2.web.app/",
       sourceCode: "https://github.com/PatricioMonpelat/netflix-clone.git",
       project1_mock: "https://monpelat.dev/images/projects/project1_mock.webp",
@@ -16,27 +17,47 @@ var urls = {
       project3_mock: "https://monpelat.dev/images/projects/project3_mock.webp",
     },
     4: {
+=======
+>>>>>>> parent of 70e8843 (.)
       liveDemo: "https://master.d2lno1hp5sufbz.amplifyapp.com/",
       sourceCode: "https://github.com/PatricioMonpelat/MemeAr.git",
       project4_mock: "https://monpelat.dev/images/projects/project4_mock.webp",
     },
+<<<<<<< HEAD
+=======
+    2: {
+      liveDemo: "",
+      sourceCode: "",
+    },
+    3: {
+      liveDemo: "",
+      sourceCode: "",
+    },
+    4: {
+        liveDemo: "https://master.d2lno1hp5sufbz.amplifyapp.com/",
+        sourceCode: "https://github.com/PatricioMonpelat/MemeAr.git",
+        project4_mock: "https://monpelat.dev/images/projects/project4_mock.webp",
+    },
+    5: {
+      liveDemo: "",
+      sourceCode: "",
+    },
+>>>>>>> parent of 70e8843 (.)
     6: {
-      liveDemo: "https://todo-app-d28bb.web.app/",
-      sourceCode: "https://github.com/PatricioMonpelat/todo-app.git",
-      project6_mock: "https://monpelat.dev/images/projects/project6_mock.webp",
+      liveDemo: "",
+      sourceCode: "",
     },
     7: {
-      liveDemo: "https://airbnb-clone-rouge-nine.vercel.app/",
-      sourceCode: "https://github.com/PatricioMonpelat/airbnb-clone",
-      project7_mock: "https://monpelat.dev/images/projects/project7_mock.webp",
+      liveDemo: "",
+      sourceCode: "",
     },
     8: {
-      liveDemo: "https://portfolio-template-patriciomonpelat.vercel.app/",
-      sourceCode: "https://github.com/PatricioMonpelat/portfolio-template",
-      project8_mock: "https://monpelat.dev/images/projects/project8_mock.webp",
+      liveDemo: "",
+      sourceCode: "",
     },
   },
   skills: {
+<<<<<<< HEAD
     angular: "https://monpelat.dev/images/skills/angular.webp",
     aws: "https://monpelat.dev/images/svg/aws.svg",
     react: "https://monpelat.dev/images/skills/react.webp",
@@ -50,5 +71,16 @@ var urls = {
     linkedin: "https://www.linkedin.com/in/patricio-monpelat-872172133/",
     github: "https://github.com/PatricioMonpelat",
     gmail: "mailto:patricio.monpelat@gmail.com",
+=======
+    angular: 'https://monpelat.dev/images/skills/angular.webp',
+    aws:'https://monpelat.dev/images/svg/aws.svg',
+
+>>>>>>> parent of 70e8843 (.)
   },
+  personal:{
+    linkedin: 'https://www.linkedin.com/in/patricio-monpelat-872172133/',
+    github:'https://github.com/PatricioMonpelat',
+    gmail: 'mailto:patricio.monpelat@gmail.com'
+  }
+
 };

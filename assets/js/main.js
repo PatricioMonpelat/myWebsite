@@ -11,6 +11,7 @@
   // add sources to all images
    document.getElementById('angularSkill').src = urls.skills.angular;
    document.getElementById('awsSkill').src = urls.skills.aws;
+<<<<<<< HEAD
    document.getElementById('reactSkill').src = urls.skills.react;
    document.getElementById('firebaseSkill').src = urls.skills.firebase;
    document.getElementById('nextSkill').src = urls.skills.next;
@@ -28,6 +29,11 @@
    document.getElementById('project6_mock').src = urls.portfolio[6].project6_mock;
    document.getElementById('project7_mock').src = urls.portfolio[7].project7_mock;
    document.getElementById('project8_mock').src = urls.portfolio[8].project8_mock;
+=======
+
+   document.getElementById('project4_mock').src = urls.portfolio[1].project4_mock;
+
+>>>>>>> parent of 70e8843 (.)
 
    // add urls to personal info
    document.getElementById('linkedin_href').href = urls.personal.linkedin;
