@@ -13,7 +13,7 @@
    document.getElementById('awsSkill').src = urls.skills.aws;
    document.getElementById('reactSkill').src = urls.skills.react;
    document.getElementById('firebaseSkill').src = urls.skills.firebase;
-   document.getElementById('nextSkill').src = urls.skills.next;
+  // document.getElementById('nextSkill').src = urls.skills.next;
    document.getElementById('tailwindSkill').src = urls.skills.tailwind;
    document.getElementById('vercelSkill').src = urls.skills.vercel;
    document.getElementById('stripeSkill').src = urls.skills.stripe;
