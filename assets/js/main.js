@@ -15,7 +15,7 @@
    document.getElementById('firebaseSkill').src = urls.skills.firebase;
   // document.getElementById('nextSkill').src = urls.skills.next;
   // document.getElementById('tailwindSkill').src = urls.skills.tailwind;
-   document.getElementById('vercelSkill').src = urls.skills.vercel;
+//    document.getElementById('vercelSkill').src = urls.skills.vercel;
    document.getElementById('stripeSkill').src = urls.skills.stripe;
 
 
