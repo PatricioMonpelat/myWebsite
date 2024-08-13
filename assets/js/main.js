@@ -20,16 +20,16 @@
 
 
    // add href sources to elements
-   document.getElementById('project1_mock').src = urls.portfolio[1].project1_mock;
-   document.getElementById('project2_mock').src = urls.portfolio[2].project2_mock;
-   document.getElementById('project3_mock').src = urls.portfolio[3].project3_mock;
-   document.getElementById('project4_mock').src = urls.portfolio[4].project4_mock;
+   //document.getElementById('project1_mock').src = urls.portfolio[1].project1_mock;
+   //document.getElementById('project2_mock').src = urls.portfolio[2].project2_mock;
+   //document.getElementById('project3_mock').src = urls.portfolio[3].project3_mock;
+   //document.getElementById('project4_mock').src = urls.portfolio[4].project4_mock;
   //  document.getElementById('project5_mock').src = urls.portfolio[5].project5_mock;
-   document.getElementById('project6_mock').src = urls.portfolio[6].project6_mock;
-   document.getElementById('project7_mock').src = urls.portfolio[7].project7_mock;
-   document.getElementById('project8_mock').src = urls.portfolio[8].project8_mock;
+  // document.getElementById('project6_mock').src = urls.portfolio[6].project6_mock;
+   //document.getElementById('project7_mock').src = urls.portfolio[7].project7_mock;
+   //document.getElementById('project8_mock').src = urls.portfolio[8].project8_mock;
 
-   document.getElementById('project4_mock').src = urls.portfolio[1].project4_mock;
+   //document.getElementById('project4_mock').src = urls.portfolio[1].project4_mock;
 
 
    // add urls to personal info
