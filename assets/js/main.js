@@ -8,17 +8,6 @@
     $main_articles = $main.children("article"),
     $preloader = $("#bouncing-loader");
 
-  // add sources to all images
-   document.getElementById('angularSkill').src = urls.skills.angular;
-   document.getElementById('awsSkill').src = urls.skills.aws;
-   document.getElementById('reactSkill').src = urls.skills.react;
-   document.getElementById('firebaseSkill').src = urls.skills.firebase;
-  // document.getElementById('nextSkill').src = urls.skills.next;
-  // document.getElementById('tailwindSkill').src = urls.skills.tailwind;
-//    document.getElementById('vercelSkill').src = urls.skills.vercel;
-   document.getElementById('stripeSkill').src = urls.skills.stripe;
-
-
    // add href sources to elements
    //document.getElementById('project1_mock').src = urls.portfolio[1].project1_mock;
    //document.getElementById('project2_mock').src = urls.portfolio[2].project2_mock;
