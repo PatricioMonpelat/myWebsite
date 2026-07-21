@@ -9,11 +9,18 @@
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
+    const isOpen = document.querySelector('#header').classList.toggle('header-show');
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
+    headerToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
   headerToggleBtn.addEventListener('click', headerToggle);
+  headerToggleBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      headerToggle();
+    }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -73,12 +80,15 @@
   /**
    * Animation on scroll function and init
    */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: prefersReducedMotion ? 0 : 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      disable: prefersReducedMotion
     });
   }
   window.addEventListener('load', aosInit);
@@ -90,13 +100,17 @@
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    if (prefersReducedMotion) {
+      selectTyped.textContent = typed_strings[0];
+    } else {
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    }
   }
 
   /**

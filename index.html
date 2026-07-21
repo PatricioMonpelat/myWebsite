@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -44,11 +44,19 @@
   </head>
 
   <body class="index-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header
       id="header"
       class="header dark-background d-flex flex-column justify-content-center"
     >
-      <i class="header-toggle d-xl-none bi bi-list"></i>
+      <i
+        class="header-toggle d-xl-none bi bi-list"
+        role="button"
+        tabindex="0"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navmenu"
+      ></i>
 
       <div class="header-container d-flex flex-column align-items-start">
         <nav id="navmenu" class="navmenu">
@@ -111,30 +119,51 @@
         </nav>
 
         <div class="social-links text-center">
-          <a href="https://x.com/patomonpe" class="twitter"
-            ><i class="bi bi-twitter-x"></i
+          <a
+            href="https://x.com/patomonpe"
+            class="twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter)"
+            ><i class="bi bi-twitter-x" aria-hidden="true"></i
           ></a>
           <a
             href="https://web.facebook.com/patomonpe/?locale=es_LA"
             class="facebook"
-            ><i class="bi bi-facebook"></i
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="bi bi-facebook" aria-hidden="true"></i
           ></a>
-          <a href="https://www.instagram.com/patomonpe" class="instagram"
-            ><i class="bi bi-instagram"></i
+          <a
+            href="https://www.instagram.com/patomonpe"
+            class="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="bi bi-instagram" aria-hidden="true"></i
           ></a>
-          <a href="https://github.com/pmonpelat" class="google-plus"
-            ><i class="bi bi-github"></i
+          <a
+            href="https://github.com/pmonpelat"
+            class="google-plus"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            ><i class="bi bi-github" aria-hidden="true"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/patricio-monpelat"
             class="linkedin"
-            ><i class="bi bi-linkedin"></i
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="bi bi-linkedin" aria-hidden="true"></i
           ></a>
         </div>
       </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
       <!-- Hero Section -->
       <section id="hero" class="hero section">
         <div class="background-elements">
@@ -153,7 +182,7 @@
                     I'm a
                     <span
                       class="typed"
-                      data-typed-items="Frontend Developer,  Backend Developer,  Database Developer,  DevOps Engineer,  QA & Testing,  System Designer,  UI/UX Implementer, Release & Support"
+                      data-typed-items="Frontend Developer, Backend Developer, Database Developer, DevOps Engineer, QA & Testing, System Designer, UI/UX Implementer, Release & Support"
                     ></span>
                   </p>
                   <p class="description">
@@ -169,15 +198,24 @@
                   </div>
 
                   <div class="social-links">
-                    <a href="https://github.com/pmonpelat"
-                      ><i class="bi bi-github"></i
+                    <a
+                      href="https://github.com/pmonpelat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      ><i class="bi bi-github" aria-hidden="true"></i
                     ></a>
                     <a
                       href="https://www.linkedin.com/in/patricio-monpelat"
-                      ><i class="bi bi-linkedin"></i
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      ><i class="bi bi-linkedin" aria-hidden="true"></i
                     ></a>
-                    <a href="mailto:patricio.monpelat@gmail.com"
-                      ><i class="bi bi-envelope"></i
+                    <a
+                      href="mailto:patricio.monpelat@gmail.com"
+                      aria-label="Email"
+                      ><i class="bi bi-envelope" aria-hidden="true"></i
                     ></a>
                   </div>
                 </div>
@@ -389,6 +427,7 @@
       <section id="skills" class="skills section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="eyebrow">Capabilities</span>
           <h2>Skills</h2>
           <p>Technologies I use day to day.</p>
         </div>
@@ -459,14 +498,14 @@
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="80"
+                        aria-valuenow="85"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Experience with React hooks, state management, and
-                      component architecture
+                      Strong command of ES6+, typed codebases, and modern
+                      tooling across frontend and backend
                     </div>
                   </div>
                 </div>
@@ -492,14 +531,14 @@
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="75"
+                        aria-valuenow="85"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Server-side JavaScript development with Express and REST
-                      APIs
+                      Designing and maintaining REST APIs in C# / .NET for
+                      enterprise applications
                     </div>
                   </div>
 
@@ -520,7 +559,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Python development with Django and data analysis tools
+                      Server-side JavaScript development with Express and REST
+                      APIs
                     </div>
                   </div>
 
@@ -541,7 +581,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Database design, optimization, and complex queries
+                      Working knowledge of Python and Go for scripting,
+                      automation, and backend services
                     </div>
                   </div>
                 </div>
@@ -568,14 +609,14 @@
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="75"
+                        aria-valuenow="85"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Server-side JavaScript development with Express and REST
-                      APIs
+                      Database design, query optimization, and administration
+                      for enterprise systems
                     </div>
                   </div>
 
@@ -596,7 +637,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Python development with Django and data analysis tools
+                      Comfortable with relational schema design and queries in
+                      PostgreSQL
                     </div>
                   </div>
 
@@ -617,7 +659,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Database design, optimization, and complex queries
+                      Experience with Firestore, authentication, and hosting
+                      for small-scale apps
                     </div>
                   </div>
                 </div>
@@ -644,14 +687,14 @@
                       <div
                         class="progress-bar"
                         role="progressbar"
-                        aria-valuenow="75"
+                        aria-valuenow="85"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Server-side JavaScript development with Express and REST
-                      APIs
+                      Building and maintaining CI/CD pipelines and release
+                      automation in Azure DevOps
                     </div>
                   </div>
 
@@ -672,7 +715,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Python development with Django and data analysis tools
+                      Containerizing applications with Docker and configuring
+                      Nginx as a reverse proxy
                     </div>
                   </div>
 
@@ -693,7 +737,8 @@
                       ></div>
                     </div>
                     <div class="skill-tooltip">
-                      Database design, optimization, and complex queries
+                      Version control workflows and agile project tracking
+                      across Git, GitHub, GitLab, and Jira
                     </div>
                   </div>
                 </div>
@@ -709,6 +754,7 @@
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
+          <span class="eyebrow">Experience</span>
           <h2>Resume</h2>
           <p>
             Full Stack Developer focused on clear code, practical solutions, and
@@ -932,7 +978,7 @@
               </div>
 
               <!-- Certifications Section -->
-              <div
+              <!-- <div
                 class="resume-section"
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -946,7 +992,7 @@
                   <h5>2024</h5>
                   <p class="company"><i class="bi bi-building"></i> EY</p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1575,6 +1621,7 @@
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <div class="container section-title" data-aos="fade-up">
+          <span class="eyebrow">Get In Touch</span>
           <h2>Contact</h2>
           <p>
             Feel free to reach out via email, phone, or LinkedIn. I usually
@@ -1653,7 +1700,7 @@
                   possible.
                 </p>
 
-                <form id="contact-form" action="https://formspree.io/f/mdkllyqa" method="POST" accept-charset="UTF-8">
+                <form id="contact-form" class="php-email-form" action="https://formspree.io/f/mdkllyqa" method="POST" accept-charset="UTF-8">
                   <input
                     type="hidden"
                     name="_subject"
@@ -1674,51 +1721,69 @@
 
                   <div class="row gy-4">
                     <div class="col-md-6">
+                      <label for="contact-name"
+                        >Your Name<span class="required-mark" aria-hidden="true">*</span></label
+                      >
                       <input
                         type="text"
+                        id="contact-name"
                         name="name"
                         class="form-control"
-                        placeholder="Your Name"
+                        placeholder="Jane Doe"
+                        autocomplete="name"
                         required
                       />
                     </div>
 
                     <div class="col-md-6">
+                      <label for="contact-email"
+                        >Your Email<span class="required-mark" aria-hidden="true">*</span></label
+                      >
                       <input
                         type="email"
+                        id="contact-email"
                         class="form-control"
                         name="email"
-                        placeholder="Your Email"
+                        placeholder="jane@example.com"
+                        autocomplete="email"
                         required
                       />
                     </div>
 
                     <div class="col-12">
+                      <label for="contact-subject"
+                        >Subject<span class="required-mark" aria-hidden="true">*</span></label
+                      >
                       <input
                         type="text"
+                        id="contact-subject"
                         class="form-control"
                         name="subject"
-                        placeholder="Subject"
+                        placeholder="Let's work together"
                         required
                       />
                     </div>
 
                     <div class="col-12">
+                      <label for="contact-message"
+                        >Message<span class="required-mark" aria-hidden="true">*</span></label
+                      >
                       <textarea
+                        id="contact-message"
                         class="form-control"
                         name="message"
                         rows="6"
-                        placeholder="Message"
+                        placeholder="Tell me about your project"
                         required
                       ></textarea>
                     </div>
 
                     <div class="col-12 text-center">
-                      <div class="loading" style="display: none">
+                      <div class="loading" role="status" aria-live="polite" style="display: none">
                         Sending...
                       </div>
-                      <div class="error-message" style="display: none"></div>
-                      <div class="sent-message" style="display: none">
+                      <div class="error-message" role="alert" aria-live="assertive" style="display: none"></div>
+                      <div class="sent-message" role="status" aria-live="polite" style="display: none">
                         Your message has been sent. Thank you!
                       </div>
                       <button type="submit" class="btn btn-primary">
@@ -1740,7 +1805,8 @@
       href="#"
       id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
+      aria-label="Back to top"
+      ><i class="bi bi-arrow-up-short" aria-hidden="true"></i
     ></a>
 
     <!-- Preloader -->

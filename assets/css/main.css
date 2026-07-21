@@ -1,43 +1,43 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Ubuntu",  sans-serif;
-  --nav-font: "Nunito",  sans-serif;
+  --default-font: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --nav-font: "Jost", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #1f1f1f; /* Background color for the entire website, including individual sections */
-  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ececec; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #232323; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #310606; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #0d0c0a; /* Background color for the entire website, including individual sections */
+  --default-color: #ece6da; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #f6f1e6; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #c8a45c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #17140f; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #1c140b; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(236, 236, 236, 0.59);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #393939; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #393939; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ececec; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: rgba(236, 230, 218, 0.62);  /* The default color of the main navmenu links */
+  --nav-hover-color: #f6f1e6; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #1c1712; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #1c1712; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #f6f1e6; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #c8a45c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #2c2c2c;
-  --surface-color: #323232;
+  --background-color: #211d17;
+  --surface-color: #2a251d;
 }
 
 .dark-background {
-  --background-color: #040b14;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #151f2b;
-  --contrast-color: #ffffff;
+  --background-color: #080706;
+  --default-color: #ece6da;
+  --heading-color: #f6f1e6;
+  --surface-color: #131110;
+  --contrast-color: #1c140b;
 }
 
 /* Smooth scroll */
@@ -73,6 +73,59 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 15px;
+  z-index: 100000;
+  padding: 12px 22px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--nav-font);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 15px;
+  color: var(--contrast-color);
+}
+
+/* Accessible focus states */
+a:focus-visible,
+button:focus-visible,
+.header-toggle:focus-visible,
+.scroll-top:focus-visible,
+.navmenu a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }
 
 /* PHP Email Form Messages
@@ -131,8 +184,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #1b1b1b;
-  --contrast-color: #444444;
+  --background-color: #141210;
   color: var(--default-color);
   position: fixed;
   top: 0;
@@ -146,7 +198,7 @@ h6 {
 }
 
 .header .header-container {
-  border-radius: 20px;
+  border-radius: 14px;
   padding: 15px;
   background-color: var(--background-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -241,8 +293,10 @@ h6 {
   color: var(--nav-color);
   padding: 15px 10px;
   font-family: var(--nav-font);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -497,31 +551,44 @@ section,
   position: relative;
 }
 
+.section-title .eyebrow {
+  display: inline-block;
+  font-family: var(--nav-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 14px;
+}
+
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 500;
   position: relative;
 }
 
 .section-title h2:before,
 .section-title h2:after {
   content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--accent-color);
+  width: 34px;
+  height: 1px;
+  background: color-mix(in srgb, var(--accent-color), transparent 30%);
   display: inline-block;
 }
 
 .section-title h2:before {
-  margin: 0 15px 10px 0;
+  margin: 0 18px 10px 0;
 }
 
 .section-title h2:after {
-  margin: 0 0 10px 15px;
+  margin: 0 0 10px 18px;
 }
 
 .section-title p {
   margin-bottom: 0;
+  font-family: var(--nav-font);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 /*--------------------------------------------------------------
@@ -543,29 +610,32 @@ section,
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--accent-color), transparent 88%) 1px, transparent 0);
+  background-size: 34px 34px;
 }
 
 .hero .background-elements .bg-circle {
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(45deg, color-mix(in srgb, var(--accent-color), transparent 90%), color-mix(in srgb, var(--accent-color), transparent 95%));
-  animation: float 6s ease-in-out infinite;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--accent-color), transparent 92%), transparent 70%);
+  animation: float 8s ease-in-out infinite;
 }
 
 .hero .background-elements .bg-circle.circle-1 {
-  width: 300px;
-  height: 300px;
-  top: 10%;
-  right: 10%;
+  width: 320px;
+  height: 320px;
+  top: 8%;
+  right: 8%;
   animation-delay: 0s;
 }
 
 .hero .background-elements .bg-circle.circle-2 {
-  width: 200px;
-  height: 200px;
-  bottom: 20%;
-  left: 5%;
-  animation-delay: 2s;
+  width: 220px;
+  height: 220px;
+  bottom: 18%;
+  left: 4%;
+  animation-delay: 2.5s;
 }
 
 .hero .hero-content {
@@ -583,19 +653,20 @@ section,
   font-size: 72px;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 15px;
+  margin-bottom: 34px;
   color: var(--heading-color);
 }
 
 .hero .hero-text h1 .accent-text {
   color: var(--accent-color);
   position: relative;
+  padding-bottom: 6px;
 }
 
 .hero .hero-text h1 .accent-text::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 3px;
@@ -622,6 +693,10 @@ section,
   padding-bottom: 2px;
 }
 
+.hero .hero-text .lead .typed-cursor {
+  color: var(--accent-color);
+}
+
 .hero .hero-text .description {
   font-size: 18px;
   line-height: 1.6;
@@ -639,9 +714,11 @@ section,
 
 .hero .hero-actions .btn {
   padding: 14px 30px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  border-radius: 50px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid;
@@ -829,7 +906,7 @@ section,
 --------------------------------------------------------------*/
 .about .profile-card {
   background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--surface-color), var(--accent-color) 5%) 100%);
-  border-radius: 2rem;
+  border-radius: 16px;
   padding: 2.5rem;
   text-align: center;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
@@ -1273,7 +1350,7 @@ section,
 }
 
 .skills .skill-item .progress .progress-bar {
-  background-color: var(--accent-color);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color), transparent 35%), var(--accent-color));
   transition: width 1.5s ease-in-out;
   width: 0;
   height: 100%;
@@ -2148,7 +2225,8 @@ section,
 .contact .contact-form {
   background-color: var(--surface-color);
   padding: 3rem;
-  border-radius: 1rem;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 88%);
   height: 100%;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
 }
@@ -2175,6 +2253,22 @@ section,
   margin-bottom: 2rem;
 }
 
+.contact .contact-form label {
+  display: block;
+  font-family: var(--nav-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 0.5rem;
+}
+
+.contact .contact-form label .required-mark {
+  color: var(--accent-color);
+  margin-left: 2px;
+}
+
 .contact .contact-form .form-control,
 .contact .contact-form .form-select {
   padding: 0.875rem 1.25rem;
@@ -2186,7 +2280,7 @@ section,
 
 .contact .contact-form .form-control:focus,
 .contact .contact-form .form-select:focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 75%);
   border-color: var(--accent-color);
 }
 
@@ -2199,7 +2293,10 @@ section,
   background-color: var(--accent-color);
   color: var(--contrast-color);
   padding: 1rem 2rem;
-  border-radius: 2rem;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
