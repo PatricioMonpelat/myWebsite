@@ -1479,6 +1479,21 @@ section,
   margin-right: 0.5rem;
 }
 
+.resume .resume-side .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume .resume-side .tech-tags li {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+}
+
 .resume .resume-side .skill-item {
   margin-bottom: 1.5rem;
 }

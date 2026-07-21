@@ -4,6 +4,16 @@
   "use strict";
 
   /**
+   * Auto-update years of experience on resume
+   */
+  const yearsExpEl = document.querySelector('#years-exp');
+  if (yearsExpEl) {
+    const startDate = new Date(yearsExpEl.dataset.startDate);
+    const years = Math.floor((Date.now() - startDate) / (1000 * 60 * 60 * 24 * 365.25));
+    yearsExpEl.textContent = `${years}+`;
+  }
+
+  /**
    * Header toggle
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
