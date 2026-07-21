@@ -1291,140 +1291,220 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# Skills Section - Systems Orrery
 --------------------------------------------------------------*/
-.skills .skills-category {
-  background-color: var(--surface-color);
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  height: 100%;
-  transition: transform 0.3s;
-}
-
-.skills .skills-category:hover {
-  transform: translateY(-5px);
-}
-
-.skills .skills-category h3 {
-  font-size: 24px;
-  margin-bottom: 25px;
+.orrery-wrap {
   position: relative;
-  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 20px 30px;
 }
 
-.skills .skills-category h3:after {
-  content: "";
+.systems-orrery {
+  position: relative;
+  width: min(100%, 720px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.systems-orrery svg {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 2px;
-  background-color: var(--accent-color);
-}
-
-.skills .skill-item {
-  margin-bottom: 25px;
-}
-
-.skills .skill-item:last-child {
-  margin-bottom: 0;
-}
-
-.skills .skill-item h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.skills .skill-item .skill-percentage {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--heading-color), transparent 30%);
-}
-
-.skills .skill-item .progress {
-  height: 8px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-}
-
-.skills .skill-item .progress .progress-bar {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color), transparent 35%), var(--accent-color));
-  transition: width 1.5s ease-in-out;
-  width: 0;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  border-radius: 20px;
+  overflow: visible;
+  pointer-events: none;
 }
 
-.skills .skill-item .skill-tooltip {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-top: 8px;
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s;
+.orrery-line {
+  stroke: color-mix(in srgb, var(--accent-color), transparent 68%);
+  stroke-width: 0.35;
+  fill: none;
+  transition: stroke 0.4s ease, opacity 0.4s ease, stroke-width 0.4s ease;
+  vector-effect: non-scaling-stroke;
 }
 
-.skills .skill-item:hover .skill-tooltip {
-  opacity: 1;
-  transform: translateY(0);
+.orrery-line.is-lit {
+  stroke: var(--accent-color);
+  stroke-width: 0.55;
 }
 
-.skills .skill-box {
-  background-color: var(--surface-color);
-  padding: 25px 20px;
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.3s;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+.orrery-line.is-dim {
+  opacity: 0.1;
 }
 
-.skills .skill-box:hover {
-  transform: translateY(-5px);
+.orrery-ring {
+  fill: none;
+  stroke: color-mix(in srgb, var(--accent-color), transparent 90%);
+  stroke-width: 0.2;
+  stroke-dasharray: 0.6 1.8;
 }
 
-.skills .skill-box:hover i {
+.orrery-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
+  background: radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--surface-color), var(--heading-color) 8%), var(--surface-color) 72%);
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--nav-font);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, opacity 0.4s ease;
+  animation: orrery-float 7s ease-in-out infinite;
+  z-index: 2;
+}
+
+.orrery-node:hover,
+.orrery-node:focus-visible {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) scale(1.1);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 40%), 0 12px 28px rgba(0, 0, 0, 0.35);
+  z-index: 6;
+}
+
+.orrery-node.is-dim {
+  opacity: 0.22;
+}
+
+.orrery-node.is-lit {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 25%), 0 0 22px color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.orrery-node .node-abbr {
+  font-size: clamp(0.6rem, 1.7vw, 0.85rem);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.node-core,
+.node-hub {
+  flex-direction: column;
+  gap: 3px;
+  padding: 6% 8%;
+}
+
+.node-core {
+  z-index: 3;
+  animation: none;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: radial-gradient(circle at 34% 28%, color-mix(in srgb, var(--accent-color), var(--surface-color) 55%), var(--surface-color) 78%);
+}
+
+.node-core:hover,
+.node-core:focus-visible {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.node-core i {
+  font-size: clamp(1rem, 2.6vw, 1.5rem);
   color: var(--accent-color);
-  transform: scale(1.1);
+  pointer-events: none;
 }
 
-.skills .skill-box:hover .skill-tooltip {
-  opacity: 1;
-  transform: translateY(0);
+.node-core .node-label {
+  font-size: clamp(0.5rem, 1.3vw, 0.7rem);
 }
 
-.skills .skill-box i {
-  font-size: 36px;
-  color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  margin-bottom: 15px;
-  display: inline-block;
-  transition: all 0.3s;
+.node-hub i {
+  font-size: clamp(0.8rem, 2vw, 1.15rem);
+  color: color-mix(in srgb, var(--accent-color), var(--heading-color) 15%);
+  pointer-events: none;
 }
 
-.skills .skill-box h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.node-hub .node-label {
+  font-size: clamp(0.42rem, 1.1vw, 0.62rem);
 }
 
-.skills .skill-box .skill-tooltip {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+.node-core .node-label,
+.node-hub .node-label {
+  font-family: var(--heading-font);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.15;
+  color: var(--heading-color);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.orrery-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translate(-50%, 6px);
+  width: max-content;
+  max-width: 220px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
+  color: var(--default-color);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
   opacity: 0;
-  transform: translateY(5px);
-  transition: all 0.3s;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  text-align: left;
+  z-index: 10;
 }
 
-@media (max-width: 991.98px) {
-  .skills .skills-category {
-    margin-bottom: 30px;
+.orrery-tooltip strong {
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--heading-font);
+  font-size: 14px;
+}
+
+.orrery-node:hover .orrery-tooltip,
+.orrery-node:focus-visible .orrery-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.orrery-hint {
+  margin-top: 22px;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@keyframes orrery-float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-5%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orrery-node {
+    animation: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .orrery-wrap {
+    padding-top: 44px;
   }
 
-  .skills .skills-category:last-child {
-    margin-bottom: 0;
+  .orrery-hub-label {
+    width: 76px;
+  }
+
+  .orrery-hint {
+    text-align: center;
+    font-size: 12px;
   }
 }
 
