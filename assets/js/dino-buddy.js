@@ -868,6 +868,9 @@
     });
   });
 
+  // Command palette "Say hi to the dino" action.
+  window.addEventListener("dino:hello", () => el.dino.dispatchEvent(new MouseEvent("click")));
+
   /* ------------------------------------------------------------------ *
    * Frame loop (paused when off-screen or tab hidden)
    * ------------------------------------------------------------------ */

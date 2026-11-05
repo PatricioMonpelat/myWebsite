@@ -60,7 +60,8 @@
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
-  if (preloader) {
+  // The cinematic intro (#preloader.intro) is handled by premium.js.
+  if (preloader && !preloader.classList.contains('intro')) {
     window.addEventListener('load', () => {
       preloader.remove();
     });

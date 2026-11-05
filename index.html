@@ -87,9 +87,14 @@
           </span>
         </a>
 
-        <div class="sidebar-status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span>Buenos Aires · <time class="sidebar-clock">--:--</time></span>
+        <div class="sidebar-meta">
+          <div class="sidebar-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Buenos Aires · <time class="sidebar-clock">--:--</time></span>
+          </div>
+          <button type="button" class="sidebar-kbd" data-cmdk aria-label="Open command menu">
+            <kbd class="kbd-mod">Ctrl</kbd><kbd>K</kbd>
+          </button>
         </div>
 
         <nav id="navmenu" class="navmenu" aria-label="Main">
@@ -197,6 +202,11 @@
             </div>
           </div>
         </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+          <span class="scroll-mouse" aria-hidden="true"><span></span></span>
+          <span class="scroll-label">Scroll</span>
+        </a>
       </section>
       <!-- /Hero Section -->
 
@@ -1613,7 +1623,14 @@
     ></a>
 
     <!-- Preloader -->
-    <div id="preloader"></div>
+    <div id="preloader" class="intro" aria-hidden="true">
+      <div class="intro-inner">
+        <svg class="intro-mono" viewBox="0 0 160 100"><text x="80" y="78" text-anchor="middle">PM</text></svg>
+        <span class="intro-line"><span></span></span>
+        <span class="intro-caption">Patricio Monpelat</span>
+      </div>
+    </div>
+    <noscript><style>#preloader{display:none}</style></noscript>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1632,5 +1649,6 @@
     <script src="assets/js/skills-orrery.js" defer></script>
     <script src="assets/js/dino-buddy.js" defer></script>
     <script src="assets/js/sidebar.js" defer></script>
+    <script src="assets/js/premium.js" defer></script>
   </body>
 </html>
