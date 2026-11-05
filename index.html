@@ -246,12 +246,88 @@
             <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
               <div class="profile-card">
                 <div class="profile-header">
-                  <div class="profile-image">
-                    <img
-                      src="assets/img/profile/pato.jpg"
-                      alt="Patricio Monpelat"
-                      class="img-fluid"
-                    />
+                  <div
+                    class="profile-image dino-world"
+                    role="img"
+                    aria-label="Night scene: the little dinosaur's home"
+                  >
+                    <svg viewBox="0 0 160 160" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="dw-sky" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#0c1020" />
+                          <stop offset=".55" stop-color="#181824" />
+                          <stop offset="1" stop-color="#3b2c18" />
+                        </linearGradient>
+                        <radialGradient id="dw-moonglow">
+                          <stop offset="0" stop-color="#f3d68a" stop-opacity=".35" />
+                          <stop offset="1" stop-color="#f3d68a" stop-opacity="0" />
+                        </radialGradient>
+                        <radialGradient id="dw-lava" cx="50%" cy="100%" r="100%">
+                          <stop offset="0" stop-color="#ffb347" stop-opacity=".9" />
+                          <stop offset="1" stop-color="#c8643a" stop-opacity="0" />
+                        </radialGradient>
+                        <linearGradient id="dw-front" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#37603c" />
+                          <stop offset="1" stop-color="#1c3220" />
+                        </linearGradient>
+                        <linearGradient id="dw-shoot" x1="0" y1="0" x2="1" y2="0">
+                          <stop offset="0" stop-color="#fff3c4" />
+                          <stop offset="1" stop-color="#fff3c4" stop-opacity="0" />
+                        </linearGradient>
+                        <mask id="dw-crescent">
+                          <rect width="160" height="160" fill="#fff" />
+                          <circle cx="118" cy="36" r="11.5" fill="#000" />
+                        </mask>
+                      </defs>
+
+                      <rect width="160" height="160" fill="url(#dw-sky)" />
+
+                      <g fill="#f3d68a">
+                        <circle class="dw-tw" cx="22" cy="24" r="1" />
+                        <circle class="dw-tw dw-d2" cx="48" cy="14" r=".7" />
+                        <circle class="dw-tw dw-d3" cx="70" cy="30" r="1.1" />
+                        <circle class="dw-tw dw-d4" cx="90" cy="12" r=".8" />
+                        <circle class="dw-tw dw-d2" cx="140" cy="62" r=".9" />
+                        <circle class="dw-tw dw-d3" cx="34" cy="50" r=".7" />
+                        <circle class="dw-tw dw-d4" cx="60" cy="58" r=".6" />
+                        <circle class="dw-tw" cx="146" cy="22" r=".7" />
+                        <circle class="dw-tw dw-d3" cx="12" cy="72" r=".8" />
+                        <circle class="dw-tw dw-d2" cx="84" cy="48" r=".6" />
+                        <path class="dw-tw dw-d4" d="M40,34 q.5,-2.5 3,-3 q-2.5,-.5 -3,-3 q-.5,2.5 -3,3 q2.5,.5 3,3Z" />
+                        <path class="dw-tw dw-d2" d="M130,84 q.4,-2 2.4,-2.4 q-2,-.4 -2.4,-2.4 q-.4,2 -2.4,2.4 q2,.4 2.4,2.4Z" />
+                      </g>
+
+                      <path class="dw-shoot" d="M64,20 l-22,9" stroke="url(#dw-shoot)" stroke-width="1.2" stroke-linecap="round" />
+
+                      <circle cx="112" cy="40" r="28" fill="url(#dw-moonglow)" />
+                      <circle cx="112" cy="40" r="12" fill="#f1d58f" mask="url(#dw-crescent)" />
+
+                      <g class="dw-smoke" fill="#4a423a">
+                        <circle cx="42" cy="66" r="3.5" />
+                        <circle cx="45" cy="58" r="4.5" />
+                        <circle cx="41" cy="49" r="5.5" />
+                      </g>
+                      <ellipse class="dw-lava" cx="42.5" cy="75" rx="9" ry="7" fill="url(#dw-lava)" />
+                      <path d="M10,112 L36,75 C39,73.5 46,73.5 49,75 L76,112 Z" fill="#1a1d1b" />
+                      <path d="M36,75 C39,73.5 46,73.5 49,75 L46.5,79 L43,76.5 L39.5,79.5 Z" fill="#e0904a" opacity=".8" />
+
+                      <path d="M0,104 C30,92 60,96 90,100 C120,104 140,90 160,94 V160 H0 Z" fill="#17251b" />
+                      <path d="M0,120 C35,108 70,112 100,118 C125,122 145,112 160,114 V160 H0 Z" fill="#203725" />
+                      <path d="M0,138 C40,124 80,128 120,134 C140,137 152,132 160,130 V160 H0 Z" fill="url(#dw-front)" />
+                      <path d="M0,138 C40,124 80,128 120,134 C140,137 152,132 160,130" fill="none" stroke="#c8a45c" stroke-opacity=".3" stroke-width=".8" />
+
+                      <path d="M120,104 q-1,-6 1,-10 M121,96 q-4,-2 -7,0 M121,96 q4,-3 7,-1 M121,99 q-3,0 -5,2 M121,99 q3,-1 5,1" stroke="#0f1a12" stroke-width="1.4" fill="none" stroke-linecap="round" />
+                      <path d="M24,132 l1.5,-4 l1,4 M28,131 l1.2,-3.4 l.8,3.4 M134,134 l1.4,-4 l1,4 M138,133 l1.2,-3.2 l.8,3.2" stroke="#4f8a4f" stroke-width=".9" fill="none" stroke-linecap="round" />
+
+                      <ellipse cx="74" cy="153" rx="18" ry="5.5" fill="#0d160f" />
+                      <path d="M56,152 q18,-6 36,0" stroke="#c8a45c" stroke-opacity=".35" stroke-width=".8" fill="none" />
+
+                      <g fill="#f5d67a">
+                        <circle class="dw-ff" cx="30" cy="118" r="1" />
+                        <circle class="dw-ff dw-d3" cx="104" cy="124" r=".9" />
+                        <circle class="dw-ff dw-d2" cx="146" cy="108" r="1" />
+                      </g>
+                    </svg>
                   </div>
                   <div class="profile-badge">
                     <i class="bi bi-check-circle-fill"></i>
@@ -1579,5 +1655,6 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/skills-orrery.js" defer></script>
+    <script src="assets/js/dino-buddy.js" defer></script>
   </body>
 </html>
