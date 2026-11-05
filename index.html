@@ -58,107 +58,68 @@
         aria-controls="navmenu"
       ></i>
 
-      <div class="header-container d-flex flex-column align-items-start">
-        <nav id="navmenu" class="navmenu">
+      <div class="header-container sidebar-card">
+        <span class="sidebar-progress" aria-hidden="true"></span>
+
+        <a href="#hero" class="sidebar-brand" aria-label="Patricio Monpelat, back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <defs>
+                <linearGradient id="bm-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0c1020" />
+                  <stop offset="1" stop-color="#2e2416" />
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" fill="url(#bm-sky)" />
+              <g fill="#f3d68a">
+                <circle class="bm-tw" cx="9" cy="10" r=".7" />
+                <circle class="bm-tw bm-d2" cx="38" cy="9" r=".6" />
+                <circle class="bm-tw bm-d3" cx="40" cy="30" r=".7" />
+                <circle class="bm-tw bm-d2" cx="7" cy="34" r=".5" />
+              </g>
+              <path d="M0,42 C12,37 24,39 36,41 C42,42 46,40 48,39 V48 H0 Z" fill="#203725" />
+            </svg>
+            <span class="brand-initials">PM</span>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Patricio Monpelat</span>
+            <span class="brand-role">Full Stack Developer</span>
+          </span>
+        </a>
+
+        <div class="sidebar-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Buenos Aires · <time class="sidebar-clock">--:--</time></span>
+        </div>
+
+        <nav id="navmenu" class="navmenu" aria-label="Main">
+          <span class="nav-indicator" aria-hidden="true"></span>
           <ul>
             <li>
-              <a href="#hero" class="active"
-                ><i class="bi bi-house navicon"></i>Home</a
-              >
+              <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span class="nav-label">Home</span><span class="nav-num">01</span></a>
             </li>
             <li>
-              <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+              <a href="#about"><i class="bi bi-person navicon"></i><span class="nav-label">About</span><span class="nav-num">02</span></a>
             </li>
             <li>
-              <a href="#resume"
-                ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
-              >
+              <a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span class="nav-label">Resume</span><span class="nav-num">03</span></a>
             </li>
-            <!-- <li>
-              <a href="#portfolio"
-                ><i class="bi bi-images navicon"></i> Portfolio</a
-              >
-            </li> -->
-            <!-- <li>
-              <a href="#services"
-                ><i class="bi bi-hdd-stack navicon"></i> Services</a
-              >
-            </li> -->
-            <!-- <li class="dropdown">
-              <a href="#"
-                ><i class="bi bi-menu-button navicon"></i>
-                <span>Dropdown</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    ><span>Deep Dropdown</span>
-                    <i class="bi bi-chevron-down toggle-dropdown"></i
-                  ></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li> -->
             <li>
-              <a href="#contact"
-                ><i class="bi bi-envelope navicon"></i> Contact</a
-              >
+              <a href="#contact"><i class="bi bi-envelope navicon"></i><span class="nav-label">Contact</span><span class="nav-num">04</span></a>
             </li>
           </ul>
         </nav>
 
-        <div class="social-links text-center">
-          <a
-            href="https://x.com/patomonpe"
-            class="twitter"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X (Twitter)"
-            ><i class="bi bi-twitter-x" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://web.facebook.com/patomonpe/?locale=es_LA"
-            class="facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            ><i class="bi bi-facebook" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/patomonpe"
-            class="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            ><i class="bi bi-instagram" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://github.com/PatricioMonpelat"
-            class="google-plus"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            ><i class="bi bi-github" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/patricio-monpelat"
-            class="linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            ><i class="bi bi-linkedin" aria-hidden="true"></i
-          ></a>
+        <a href="resume.pdf" download class="sidebar-cta">
+          <i class="bi bi-download" aria-hidden="true"></i><span>Download CV</span>
+        </a>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/patricio-monpelat" class="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+          <a href="https://github.com/PatricioMonpelat" class="github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+          <a href="https://x.com/patomonpe" class="twitter" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/patomonpe" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          <a href="https://web.facebook.com/patomonpe/?locale=es_LA" class="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
         </div>
       </div>
     </header>
@@ -1670,5 +1631,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/skills-orrery.js" defer></script>
     <script src="assets/js/dino-buddy.js" defer></script>
+    <script src="assets/js/sidebar.js" defer></script>
   </body>
 </html>
