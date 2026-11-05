@@ -1075,15 +1075,58 @@ section,
   font-weight: 500;
 }
 
-.about .profile-header .profile-badge.dino-boop {
-  animation: dino-boop 0.9s cubic-bezier(0.3, 1.5, 0.5, 1);
+/* Dino egg badge (replaces the old verified check) */
+.about .profile-header .profile-badge.egg-badge {
+  background: radial-gradient(circle at 35% 30%, #2a241b, var(--surface-color));
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45), 0 0 0 3px var(--surface-color);
 }
 
-@keyframes dino-boop {
-  0% { transform: scale(1) rotate(0); }
-  25% { transform: scale(1.35) rotate(-25deg); }
-  65% { transform: scale(0.95) rotate(360deg); }
-  100% { transform: scale(1) rotate(360deg); }
+.about .egg-badge svg {
+  width: 16px;
+  height: 19px;
+  overflow: visible;
+  transform-origin: 50% 90%;
+  animation: egg-idle 7s ease-in-out infinite;
+}
+
+.about .egg-badge .egg-crack {
+  opacity: 0;
+}
+
+.about .egg-badge.dino-boop svg {
+  animation: egg-wobble 0.9s ease-in-out;
+}
+
+.about .egg-badge.dino-boop .egg-crack {
+  animation: egg-crack 1.8s ease-out;
+}
+
+@keyframes egg-idle {
+  0%, 84%, 100% { transform: rotate(0); }
+  87% { transform: rotate(-9deg); }
+  90% { transform: rotate(8deg); }
+  93% { transform: rotate(-5deg); }
+  96% { transform: rotate(3deg); }
+}
+
+@keyframes egg-wobble {
+  0% { transform: translateY(0) rotate(0) scale(1); }
+  15% { transform: translateY(-3px) rotate(-20deg) scale(1.15); }
+  35% { transform: translateY(0) rotate(16deg) scale(1.05); }
+  55% { transform: rotate(-11deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(0) scale(1); }
+}
+
+@keyframes egg-crack {
+  0%, 10% { opacity: 0; }
+  20%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about .egg-badge svg { animation: none; }
 }
 
 .about .profile-header .profile-image.dino-portal {
